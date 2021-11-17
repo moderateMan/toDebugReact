@@ -349,6 +349,7 @@ export function renderWithHooks<Props, SecondArg>(
 ): any {
   renderLanes = nextRenderLanes;
   currentlyRenderingFiber = workInProgress;
+
   if (__DEV__) {
     hookTypesDev =
       current !== null
@@ -396,7 +397,7 @@ export function renderWithHooks<Props, SecondArg>(
         ? HooksDispatcherOnMount
         : HooksDispatcherOnUpdate;
   }
-  debugger
+
   let children = Component(props, secondArg);
 
   // Check if there was a render phase update

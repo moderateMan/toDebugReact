@@ -11,7 +11,7 @@ const OFF = 0;
 const ERROR = 2;
 
 module.exports = {
-  extends: [],
+  // extends: [ 'prettier'],
 
   // Stop ESLint from looking for a configuration file in parent folders
   root: true,
@@ -21,6 +21,7 @@ module.exports = {
     'no-for-of-loops',
     'no-function-declare-after-return',
     'react',
+    'react-internal',
   ],
 
   parser: 'babel-eslint',
@@ -101,13 +102,13 @@ module.exports = {
 
     // CUSTOM RULES
     // the second argument of warning/invariant should be a literal string
-    // 'react-internal/no-primitive-constructors': ERROR,
-    // 'react-internal/no-to-warn-dev-within-to-throw': ERROR,
-    // 'react-internal/invariant-args': ERROR,
-    // 'react-internal/warning-args': ERROR,
-    // 'react-internal/no-production-logging': ERROR,
-    // 'react-internal/no-cross-fork-imports': ERROR,
-    // 'react-internal/no-cross-fork-types': [
+    'react-internal/no-primitive-constructors': ERROR,
+    'react-internal/no-to-warn-dev-within-to-throw': ERROR,
+    'react-internal/invariant-args': ERROR,
+    'react-internal/warning-args': ERROR,
+    'react-internal/no-production-logging': ERROR,
+    'react-internal/no-cross-fork-imports': ERROR,
+    'react-internal/no-cross-fork-types': [
       ERROR,
       {
         old: [
@@ -168,10 +169,10 @@ module.exports = {
         'packages/dom-event-testing-library/**/*.js',
         'packages/react-devtools*/**/*.js',
       ],
-      // rules: {
-      //   'react-internal/no-production-logging': OFF,
-      //   'react-internal/warning-args': OFF,
-      // },
+      rules: {
+        'react-internal/no-production-logging': OFF,
+        'react-internal/warning-args': OFF,
+      },
     },
     {
       files: ['packages/react-native-renderer/**/*.js'],

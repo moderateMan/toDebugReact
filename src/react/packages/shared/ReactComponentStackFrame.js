@@ -23,9 +23,8 @@ import {
 
 import {disableLogs, reenableLogs} from 'shared/ConsolePatchingDev';
 
-import ReactSharedInternals from './ReactSharedInternals';
+import ReactSharedInternals from 'shared/ReactSharedInternals';
 
-debugger
 const {ReactCurrentDispatcher} = ReactSharedInternals;
 
 let prefix;
